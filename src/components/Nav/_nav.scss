@@ -1,0 +1,113 @@
+.navbar {
+    font-family: 'Bitter', serif;
+    position: fixed;
+    top: 0;
+    background: $primary-color;
+    color: white;
+    z-index: 1;
+    width: 100%;
+    padding: 6px 0;
+    border-bottom: 1px solid black;
+    .logo {
+      padding-left: 10px;
+      color: $secondary-color;
+      text-decoration: none;
+      font-size: 24px;
+    }
+  
+    ul {
+      display: none;
+      li {
+        border-top: 1px solid black;
+      }
+      a {
+        width: 100%;
+        color: $secondary-color;
+        &:hover {
+          color: #007bfe;
+          background: #444;
+        }
+      }
+    }
+    .showUl {
+      width: 100%;
+      text-align: center;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .burger {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 25px;
+      height: 2px;
+      background: $secondary-color;
+      position: relative;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: 0.5s;
+    }
+  
+    .burger:before {
+      top: -9px;
+    }
+  
+    .burger:after {
+      top: 9px;
+    }
+    .burger-container {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+    }
+  
+    .burger-main:before,
+    .burger-main:after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 2px;
+      background: $secondary-color;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: 0.5s;
+    }
+  
+    .burger-container.active-burger .burger-main {
+      background: rgba(0, 0, 0, 0);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+    }
+  
+    .burger-container.active-burger .burger-main:before {
+      top: 0;
+      transform: rotate(135deg);
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    .burger-container.active-burger .burger-main:after {
+      top: 0;
+      transform: rotate(225deg);
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .navbar {
+      ul {
+        text-align: center;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        margin: 0 10px 0 0;
+        padding: 0;
+        li {
+          border: none;
+        }
+      }
+      .burger-container {
+        display: none;
+      }
+    }
+  }

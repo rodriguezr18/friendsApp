@@ -1,0 +1,47 @@
+.mobalOptionsMenu {
+    display: none;
+  }
+  
+  .optionsMenu {
+    width: 370px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 15px $dark-primary-color;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  .optionButton {
+    background-color: white;
+    box-shadow: 0 0 5px #007bff;
+    margin-bottom: 10px;
+    &:hover {
+      color: white;
+      background-color: #007bff;
+    }
+  }
+  
+  .componentHeader {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 10px 0;
+    width: 85%;
+    border-bottom: solid black 2px;
+  }
+  
+  @media only screen and (max-width: 850px) {
+    .mobalOptionsMenu {
+      display: block;
+      margin: 0 auto;
+      width: 426px;
+      button {
+        margin: 0 5px;
+      }
+    }
+    .optionsMenu {
+      display: none;
+    }
+  }

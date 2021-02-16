@@ -1,0 +1,29 @@
+.friendComponent {
+    width: 300px;
+    background: white;
+    box-shadow: 0 0 15px $dark-primary-color;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 10px;
+    .closeFriend {
+      border: none;
+      font-size: 20px;
+      position: absolute;
+      right: 0;
+      border-radius: 3px;
+      padding: 4px 11px;
+      color: black;
+    }
+    ul {
+      padding: 0;
+      .friend {
+        list-style-type: none;
+        text-align: center;
+        padding-bottom: 5px;
+        font-size: 20px;
+      }
+    }
+    button {
+      color: $secondary-color;
+    }
+  }

@@ -1,0 +1,118 @@
+.hideModal {
+    display: none;
+  }
+  
+  $primary-color: #333;
+  $dark-primary-color: #444;
+  $secondary-color: #e9ecef;
+  $third-color: #ff4d4d;
+  
+  @import "../components/nav/_nav";
+  @import "../components/nav/_nav.scss";
+  @import "../components//Button/button";
+  @import "../components/Card/card";
+  @import "../components/Login/login";
+  @import "../components/Favorites/favorites";
+  @import "../components/Signup/signup";
+  @import "../components/EventModal/eventModal";
+  @import "../components//ProfileOptions/profileOptions";
+  @import "../components/FriendComponent/friendComponent";
+  @import "../components/Footer/footer";
+  @import "../components/Welcome/welcome";
+  @import "../components/InviteComponent/inviteComponents";
+  @import "../components/ProfileEvents/profileEvent";
+  
+  .left {
+    background-color: white;
+    background-color: #19cc7f;
+    text-shadow: 1px 1px #fff;
+  }
+  
+  .left2 {
+    font-size: 20px;
+    background-color: #fff;
+  }
+  
+  .right2 {
+    background-color: white;
+    font-size: 20px;
+    border-left-style: solid;
+  }
+  
+  .left2,
+  .right2 {
+    border-top-style: solid;
+    border-top-color: black;
+  }
+  
+  body {
+    background-color: $secondary-color;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .dropdown-toggle {
+    background-color: white;
+    color: black;
+    border: solid #007bff 1px;
+    width: 200px;
+    &:hover {
+      border: solid #007bff 1px;
+      background-color: #007bff;
+    }
+  }
+  
+  #dropdownMenu2 {
+    color: black;
+  }
+  
+  .searchDropdown {
+    height: 350px;
+    overflow: auto;
+  }
+  
+  .main-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .header-search-container {
+    text-align: center;
+    margin: 20px auto;
+  }
+  
+  main {
+    margin-top: 51px;
+  }
+  
+  .profile-body {
+    margin-top: 80px;
+    .profile-content {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+  
+  .profile-wrapper {
+    min-height: calc(100vh - 212px);
+  }
+  
+  .main-wrapper {
+    min-height: calc(100vh - 183px);
+  }
+  
+  .home-wrapper {
+    min-height: calc(100vh - 132px);
+  }
+  
+  @media only screen and (max-width: 850px) {
+    .profile-content {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column-reverse;
+    }
+    .eventComponent, .friendComponent, .inviteComponent, .favoritedComponent {
+      margin: 20px auto;
+    }
+  }
